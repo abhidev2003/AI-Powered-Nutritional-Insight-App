@@ -1,0 +1,65 @@
+// app.json
+{
+  "expo": {
+    "name": "NutritionalInsightApp",
+    "slug": "nutritional-insight-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png", // Ensure this file exists in ./assets
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true, // Enable New Architecture
+    "splash": {
+      "image": "./assets/splash.png", // Ensure this file exists in ./assets
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      // Optional: Replace with your actual iOS Bundle Identifier if needed for deployment
+      "bundleIdentifier": "com.yourcompany.nutritionalinsightapp",
+      "infoPlist": {
+         // Camera permission message for iOS (required by expo-camera plugin)
+        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access your camera to scan food items."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+         // Ensure this file exists in ./assets
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+       // Optional: Replace with your actual Android Package Name if needed for deployment
+      "package": "com.yourcompany.nutritionalinsightapp",
+      "permissions": [
+         // Explicitly request camera permission (also handled by plugin)
+        "android.permission.CAMERA"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png" // Ensure this file exists in ./assets
+    },
+    "plugins": [
+      // Config plugin for expo-camera (handles native permissions)
+      [
+        "expo-camera",
+        {
+          // This message might override the one in infoPlist/permissions
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera to scan barcodes and food labels."
+        }
+      ],
+      // Config plugin for expo-dev-client (needed for development builds)
+       // No specific configuration needed here usually, just including it enables it.
+      "expo-dev-client"
+    ],
+    "extra": {
+       // EAS Project ID - linked to your Expo account project
+       // This was generated when you ran 'eas project:init' successfully
+      "eas": {
+        "projectId": "b34c1ed0-5832-4d63-b749-461910e0031b"
+      }
+    }
+  }
+}

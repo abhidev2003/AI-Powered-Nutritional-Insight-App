@@ -1,0 +1,31 @@
+{
+  "cli": {
+    "version": ">= 7.0.0", // Updated to a more recent common version constraint
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+      // Add android specific dev settings if needed, e.g.
+      // "android": {
+      //   "buildType": "apk"
+      // }
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {
+      // --- Add this section ---
+      "android": {
+        "buildType": "apk"
+      },
+      // --- End Add ---
+      // Keep other production settings if needed
+      "autoIncrement": true // You can keep this
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
