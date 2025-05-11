@@ -124,5 +124,4 @@ Follow these steps to set up and run the project locally for development.
 
 This project was developed as an academic requirement. You are welcome to copy, modify, and use this code as a base for your own projects.
 
-Consider adding an open-source license file (e.g., MIT License) to clearly define permissions if you plan to share your modifications more broadly.
 
